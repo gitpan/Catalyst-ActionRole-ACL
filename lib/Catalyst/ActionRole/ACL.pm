@@ -3,7 +3,7 @@ use Moose::Role;
 use namespace::autoclean;
 
 use vars qw($VERSION);
-$VERSION = '0.05'; # REMEMBER TO BUMP VERSION IN Action::Role::ACL ALSO!
+$VERSION = '0.06'; # REMEMBER TO BUMP VERSION IN Action::Role::ACL ALSO!
 
 =head1 NAME
 
@@ -30,8 +30,8 @@ Catalyst::ActionRole::ACL - User role-based authorization action class
  sub denied :Private {
      my ($self, $c) = @_;
 
-     $c->res->status = '403';
-     $c->body('Denied!');
+     $c->res->status('403');
+     $c->res->body('Denied!');
  }
 
 =head1 DESCRIPTION

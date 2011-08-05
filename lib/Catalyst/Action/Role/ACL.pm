@@ -6,7 +6,7 @@ extends 'Catalyst::Action';
 with 'Catalyst::ActionRole::ACL';
 
 use vars qw($VERSION);
-$VERSION = '0.05'; # Note - Remember to keep in sync with Catalyst::ActionRole::ACL
+$VERSION = '0.06'; # Note - Remember to keep in sync with Catalyst::ActionRole::ACL
 
 {
     my $has_warned = 0;
@@ -39,8 +39,8 @@ Catalyst::Action::Role::ACL - Deprecated user role-based authorization action cl
  sub denied :Private {
      my ($self, $c) = @_;
 
-     $c->res->status = '403';
-     $c->body('Denied!');
+     $c->res->status('403');
+     $c->res->body('Denied!');
  }
 
 =head1 DESCRIPTION

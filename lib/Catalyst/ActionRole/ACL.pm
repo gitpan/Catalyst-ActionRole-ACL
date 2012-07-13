@@ -3,7 +3,7 @@ use Moose::Role;
 use namespace::autoclean;
 
 use vars qw($VERSION);
-$VERSION = '0.06'; # REMEMBER TO BUMP VERSION IN Action::Role::ACL ALSO!
+$VERSION = '0.07'; # REMEMBER TO BUMP VERSION IN Action::Role::ACL ALSO!
 
 =head1 NAME
 
@@ -15,7 +15,7 @@ Catalyst::ActionRole::ACL - User role-based authorization action class
  use Moose;
  use namespace::autoclean;
 
- BEGIN { extends 'Catalyst::Controller::ActionRole' }
+ BEGIN { extends 'Catalyst::Controller' }
 
  sub foo
  :Local
@@ -36,7 +36,7 @@ Catalyst::ActionRole::ACL - User role-based authorization action class
 
 =head1 DESCRIPTION
 
-Provides a L<Catalyst reusable action role|Catalyst::Controller::ActionRole>
+Provides a reusable action role
 for user role-based authorization.
 ACLs are applied via the assignment of attributes to
 application action subroutines.
